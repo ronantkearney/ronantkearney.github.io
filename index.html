@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script>
+      const tooltipCallback = function () {
+        return;
+      };
+    </script>
+    <div class="mermaid">
+  graph TB
+    subgraph SG1[Kearney]
+      direction TB
+      SG1S1(Sean)
+      SG1S2(Tom)
+      SG1S3(Eli)
+    end
+    SG5S1---|Arthur|SG1
+    SG2S2---|Kearney|SG1
+    subgraph SG2[Kearney]
+      direction TB
+      SG2S1(Laura)
+      SG2S2(Ronan)
+    end
+    SG2S1---|Kearney|SG4
+    subgraph SG3[Mahon]
+      direction TB
+      SG3S1(Betty)
+      SG3S2(Rose)
+    end
+    TomMahon
+    MargaretFlynn
+    SG3S2---|Mahon|SG2
+    SG6S1---|Kearney|SG2
+    subgraph SG4[Lopes]
+      direction TB
+      SG4S1(Beatriz)
+      SG4S2(Vasco)
+    end
+    TomMahon---SG3
+    MargaretFlynn---SG3
+    subgraph SG5[Arthur]
+      direction TB
+      SG5S1(Miriam)
+      SG5S2(Susan)
+      SG5S3(Peter)
+    end
+    subgraph SG6[Kearney]
+      direction TB
+      SG6S1(Dermot)
+      SG6S2(Olive)
+      SG6S3(Marion)
+      SG6S4(Ray)
+      SG6S5(Micheal)
+    end
+    subgraph SG7[Mulcahy]
+      direction TB
+      SG7S1(Claire)
+      SG7S2(Brian)
+      SG7S3(Aishling)
+      SG7S4(Cormac)
+      SG7S5(Erica)
+    end
+    SG6S2---|Kearney|SG7
+    subgraph SG8[Mulcahy]
+      direction TB
+      SG8S1(Elva)
+      SG8S2(Aidan)
+    end
+    SG7S1---SG8
+    subgraph SG9[Lopes]
+      direction TB
+      SG9S1(Victor)
+    end
+    SG9S1---|Lopes|SG4  
+    subgraph SG10[Fitzpatrick]
+      direction TB    
+      SG10S1(Owen)
+      SG10S2(Kevin)
+    end
+    SG3S1---|Mahon|SG10
+    subgraph SG11[Fitzpatrick]
+      direction TB
+      SG11S1(Kate)
+      SG11S2(Lucy)
+    end
+    SG10S1---|Fitzpatrick|SG11
+    click SG2S2 call tooltipCallback() "Name: Ronan Kearney<br/>Born: 20 March 1978<br/>Age: 44<br/>Place: Phibsboro"
+    subgraph SG12[Dewer]
+      direction TB
+      SG12S1(Amy)
+      SG12S2(Helen)
+      SG12S3(Ruth)
+    end
+    SG6S3---|Kearney|SG12
+    </div>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+      var config = {
+        startOnLoad: true,
+        flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'cardinal' },
+        securityLevel: 'loose',
+      };
+      mermaid.initialize(config);
+    </script>
+  </body>
+</html>
