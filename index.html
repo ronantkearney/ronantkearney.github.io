@@ -10,97 +10,298 @@
       };
     </script>
     <div class="mermaid">
-  graph TB
-    subgraph SG1[Kearney]
-      direction TB
-      SG1S1(Sean)
-      SG1S2(Tom)
-      SG1S3(Eli)
-    end
-    SG5S1---|Arthur|SG1
-    SG2S2---|Kearney|SG1
-    subgraph SG2[Kearney]
-      direction TB
-      SG2S1(Laura)
-      SG2S2(Ronan)
-    end
-    SG2S1---|Kearney|SG4
-    subgraph SG3[Mahon]
-      direction TB
-      SG3S1(Betty)
-      SG3S2(Rose)
-    end
-    TomMahon
-    MargaretFlynn
-    SG3S2---|Mahon|SG2
-    SG6S1---|Kearney|SG2
-    subgraph SG4[Lopes]
-      direction TB
-      SG4S1(Beatriz)
-      SG4S2(Vasco)
-    end
-    TomMahon---SG3
-    MargaretFlynn---SG3
-    subgraph SG5[Arthur]
-      direction TB
-      SG5S1(Miriam)
-      SG5S2(Susan)
-      SG5S3(Peter)
-    end
-    subgraph SG6[Kearney]
-      direction TB
-      SG6S1(Dermot)
-      SG6S2(Olive)
-      SG6S3(Marion)
-      SG6S4(Ray)
-      SG6S5(Micheal)
-    end
-    subgraph SG7[Mulcahy]
-      direction TB
-      SG7S1(Claire)
-      SG7S2(Brian)
-      SG7S3(Aishling)
-      SG7S4(Cormac)
-      SG7S5(Erica)
-    end
-    SG6S2---|Kearney|SG7
-    subgraph SG8[Mulcahy]
-      direction TB
-      SG8S1(Elva)
-      SG8S2(Aidan)
-    end
-    SG7S1---SG8
-    subgraph SG9[Lopes]
-      direction TB
-      SG9S1(Victor)
-    end
-    SG9S1---|Lopes|SG4  
-    subgraph SG10[Fitzpatrick]
-      direction TB    
-      SG10S1(Owen)
-      SG10S2(Kevin)
-    end
-    SG3S1---|Mahon|SG10
-    subgraph SG11[Fitzpatrick]
-      direction TB
-      SG11S1(Kate)
-      SG11S2(Lucy)
-    end
-    SG10S1---|Fitzpatrick|SG11
-    click SG2S2 call tooltipCallback() "Name: Ronan Kearney<br/>Age: 44<br/>Place: Phibsboro"
-    subgraph SG12[Dewer]
-      direction TB
-      SG12S1(Amy)
-      SG12S2(Helen)
-      SG12S3(Ruth)
-    end
-    SG6S3---|Kearney|SG12
+
+graph TB
+  subgraph SG1[Kearney]
+    direction TB
+    SG1Laura(Laura)
+    SG1Ronan(Ronan)
+  end
+  SG25Dermot---SG1
+  linkStyle 0 stroke:gray;
+  SG4Rose---SG1
+  linkStyle 1 stroke:maroon;
+  subgraph SG2[Kearney]
+    direction TB
+    SG2Sean(Sean)
+    SG2Tom(Tom)
+    SG2Eli(Eli)
+  end
+  SG1Ronan---SG2
+  linkStyle 2 stroke:blue;
+  SG3Miriam---SG2
+  linkStyle 3 stroke:purple;
+  subgraph SG3[Arthur]
+    direction TB
+    SG3Miriam(Miriam)
+    SG3Susan(Susan)
+    SG3Peter(Peter)
+  end
+  SG33Flan---SG3
+  linkStyle 4 stroke:olive;
+  SG30Peggy---SG3
+  linkStyle 5 stroke:black;
+  subgraph SG4[Mahon]
+    direction TB
+    SG4Betty(Betty)
+    SG4Rose(Rose)
+  end
+  SG6Margaret---SG4
+  linkStyle 6 stroke:navy;
+  subgraph SG5[Fitzpatrick]
+    direction TB
+    SG5Owen(Owen)
+    SG5Kevin(Kevin)
+  end
+  SG24Noel---SG5
+  linkStyle 7 stroke:red;
+  SG4Betty---SG5
+  linkStyle 8 stroke:lime;
+  subgraph SG6[Flynn]
+    direction TB
+    SG6Mary(Mary)
+    SG6Margaret(Margaret)
+    SG6Jim(Jim)
+    SG6Pat(Pat)
+    SG6Katie(Katie)
+    SG6Ellen(Ellen)
+  end
+  SG10Michael---SG6
+  linkStyle 9 stroke:fuchsia;
+  SG11Kate---SG6
+  linkStyle 10 stroke:gray;
+  subgraph SG7[Mulhern]
+    direction TB
+    SG7Marie(Marie)
+  end
+  SG6Katie---SG7
+  linkStyle 11 stroke:maroon;
+  subgraph SG8[Tunstead]
+    direction TB
+    SG8Alana(Alana)
+    SG8Michelle(Michelle)
+  end
+  SG7Marie---SG8
+  linkStyle 12 stroke:blue;
+  subgraph SG9[Tunstead]
+    direction TB
+    SG9Marcus(Marcus)
+    SG9Matthew(Matthew)
+  end
+  SG8Alana---SG9
+  linkStyle 13 stroke:purple;
+  SG21Lisa---SG9
+  linkStyle 14 stroke:olive;
+  subgraph SG10[Flynn]
+    direction TB
+    SG10Joseph(Joseph)
+    SG10Mary(Mary)
+    SG10James(James)
+    SG10Peter(Peter)
+    SG10Michael(Michael)
+    SG10Margaret(Margaret)
+  end
+  SG12Patrick---SG10
+  linkStyle 15 stroke:black;
+  subgraph SG11[Whelan]
+    direction TB
+    SG11Thomas(Thomas)
+    SG11John(John)
+    SG11Margaret(Margaret)
+    SG11James(James)
+    SG11Michael(Michael)
+    SG11Matthew(Matthew)
+    SG11Kate(Kate)
+  end
+  SG13Peter---SG11
+  linkStyle 16 stroke:navy;
+  subgraph SG12[Flynn]
+    direction TB
+    SG12Ellen(Ellen)
+    SG12Patrick(Patrick)
+    SG12Joseph(Joseph)
+    SG12James(James)
+    SG12Peter(Peter)
+  end
+  SG14Peter---SG12
+  linkStyle 17 stroke:red;
+  SG15Mary---SG12
+  linkStyle 18 stroke:lime;
+  subgraph SG13[Whelan]
+    direction TB
+    SG13Peter(Peter)
+    SG13Pat(Pat)
+    SG13Rose(Rose)
+    SG13Catherine(Catherine)
+    SG13Michael(Michael)
+  end
+  SG16Michael---SG13
+  linkStyle 19 stroke:fuchsia;
+  SG17Catherine---SG13
+  linkStyle 20 stroke:gray;
+  subgraph SG14[Flynn]
+    direction TB
+    SG14Peter(Peter)
+  end
+  subgraph SG15[O'Beirne]
+    direction TB
+    SG15Mary(Mary)
+  end
+  subgraph SG16[Whelan]
+    direction TB
+    SG16Michael(Michael)
+  end
+  subgraph SG17[McHugh]
+    direction TB
+    SG17Catherine(Catherine)
+  end
+  subgraph SG18[Flynn]
+    direction TB
+    SG18Patsy(Patsy)
+    SG18Marian(Marian)
+    SG18Gerry(Gerry)
+  end
+  SG6Jim---SG18
+  linkStyle 21 stroke:maroon;
+  subgraph SG19[Lopes]
+    direction TB
+    SG19Beatriz(Beatriz)
+    SG19Vasco(Vasco)
+  end
+  SG20Victor---SG19
+  linkStyle 22 stroke:blue;
+  SG1Laura---SG19
+  linkStyle 23 stroke:purple;
+  subgraph SG20[Lopes]
+    direction TB
+    SG20Victor(Victor)
+  end
+  subgraph SG21[Doherty]
+    direction TB
+    SG21Lisa(Lisa)
+  end
+  subgraph SG22[Fitzpatrick]
+    direction TB
+    SG22Kate(Kate)
+    SG22Lucy(Lucy)
+  end
+  SG5Owen---SG22
+  linkStyle 24 stroke:olive;
+  subgraph SG23[Arthur]
+    direction TB
+    SG23Patrick(Patrick)
+    SG23Matthew(Matthew)
+  end
+  SG3Peter---SG23
+  linkStyle 25 stroke:black;
+  subgraph SG24[Fitzpatrick]
+    direction TB
+    SG24Noel(Noel)
+    SG24Joan(Joan)
+  end
+  subgraph SG25[Kearney]
+    direction TB
+    SG25Olive(Olive)
+    SG25Dermot(Dermot)
+    SG25Ray(Ray)
+    SG25Marion(Marion)
+    SG25Mícheál(Mícheál)
+  end
+  subgraph SG26[Mulcahy]
+    direction TB
+    SG26Claire(Claire)
+    SG26Brian(Brian)
+    SG26Aishling(Aishling)
+    SG26Cormac(Cormac)
+    SG26Erica(Erica)
+  end
+  SG25Olive---SG26
+  linkStyle 26 stroke:navy;
+  subgraph SG27[Mulcahy]
+    direction TB
+    SG27Elva(Elva)
+    SG27Aidan(Aidan)
+  end
+  SG26Claire---SG27
+  linkStyle 27 stroke:red;
+  subgraph SG28[Hegarty]
+    direction TB
+    SG28Simon(Simon)
+    SG28Aaron(Aaron)
+    SG28Simone(Simone)
+  end
+  SG24Joan---SG28
+  linkStyle 28 stroke:lime;
+  subgraph SG29[Dewer]
+    direction TB
+    SG29Amy(Amy)
+    SG29Helen(Helen)
+    SG29Ruth(Ruth)
+  end
+  SG25Marion---SG29
+  linkStyle 29 stroke:fuchsia;
+  subgraph SG30[Meade]
+    direction TB
+    SG30Peggy(Peggy)
+    SG30Michael(Michael)
+    SG30Maura(Maura)
+  end
+  subgraph SG31[Kelly]
+    direction TB
+    SG31Paul(Paul)
+    SG31Ciaran(Ciaran)
+    SG31Brian(Brian)
+  end
+  SG30Maura---SG31
+  linkStyle 30 stroke:gray;
+  subgraph SG32[Meade]
+    direction TB
+    SG32Ethel(Ethel)
+    SG32Joan(Joan)
+    SG32James(James)
+    SG32Fiona(Fiona)
+    SG32Michelle(Michelle)
+    SG32Margurite(Margurite)
+    SG32Alan(Alan)
+    SG32Regina(Regina)
+    SG32Louise(Louise)
+    SG32Niall(Niall)
+  end
+  SG30Michael---SG32
+  linkStyle 31 stroke:maroon;
+  subgraph SG33[Arthur]
+    direction TB
+    SG33Flan(Flan)
+    SG33PJ(PJ)
+    SG33Jim(Jim)
+    SG33Geraldine(Geraldine)
+  end
+  subgraph SG34[Arthur]
+    direction TB
+    SG34Mary(Mary)
+    SG34Collette(Collette)
+    SG34Raymond(Raymond)
+    SG34Tony(Tony)
+    SG34Michael(Michael)
+  end
+  SG33Jim---SG34
+  linkStyle 32 stroke:blue;
+  subgraph SG35[Arthur]
+    direction TB
+    SG35Lorna(Lorna)
+    SG35Deirdre(Deirdre)
+    SG35Clare(Clare)
+    SG35Carmel(Carmel)
+    SG35Rory(Rory)
+  end
+  SG33PJ---SG35
+  linkStyle 33 stroke:purple;
     </div>
     <script type="module">
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
       var config = {
         startOnLoad: true,
-        flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'cardinal' },
+        flowchart: { useMaxWidth: true, curve: 'basis', nodeSpacing: '40', rankSpacing: '100' },
         securityLevel: 'loose',
       };
       mermaid.initialize(config);
