@@ -162,6 +162,13 @@ graph TB
   end
   SG6Jim---SG18
   linkStyle 21 stroke:green;
+  subgraph SG119[Lennon]
+    direction TB
+    SG119Barry(Barry)
+    SG119Gavin(Gavin)
+    SG119Niall(Niall)
+  end
+  SG18Marian---SG119
   subgraph SG19[Lopes]
     direction TB
     SG19Beatriz(Beatriz)
@@ -503,7 +510,7 @@ graph TB
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
       var config = {
         startOnLoad: true,
-        flowchart: { useMaxWidth: true, curve: 'basis', nodeSpacing: '40', rankSpacing: '100' },
+        flowchart: { useMaxWidth: false, rankSpacing: '100' },
         securityLevel: 'loose',
       };
       mermaid.initialize(config);
