@@ -509,8 +509,9 @@ graph TB
     <script type="module">
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
       var config = {
+	  	theme: 'forest',
         startOnLoad: true,
-        flowchart: { useMaxWidth: false, rankSpacing: '100' },
+        flowchart: { rankSpacing: 150, useMaxWidth: false },
         securityLevel: 'loose',
       };
       mermaid.initialize(config);
