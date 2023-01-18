@@ -162,13 +162,6 @@ graph TB
   end
   SG6Jim---SG18
   linkStyle 21 stroke:green;
-  subgraph SG119[Lennon]
-    direction TB
-    SG119Barry(Barry)
-    SG119Gavin(Gavin)
-    SG119Niall(Niall)
-  end
-  SG18Marian---SG119
   subgraph SG19[Lopes]
     direction TB
     SG19Beatriz(Beatriz)
@@ -308,7 +301,7 @@ graph TB
   linkStyle 35 stroke:blue;
   subgraph SG36[Kearney]
     direction TB
-    SG36JohPatrick(John Patrick)
+    SG36J.P.(J.P.)
     SG36Gerard(Gerard)
     SG36Mary(Mary)
     SG36Matthew(Matthew)
@@ -341,14 +334,14 @@ graph TB
   linkStyle 39 stroke:navy;
   subgraph SG38[Kearney]
     direction TB
-    SG38Geroid(Geroid)
+    SG38Gearoid(Gearoid)
     SG38Noreen(Noreen)
-    SG38Aine(Aine)
-    SG38Richard(Richard)
+    SG38Áine(Áine)
+    SG38Rick(Rick)
   end
   SG36Richard---SG38
   linkStyle 40 stroke:red;
-  SG44Noreen---SG38
+  SG44Noirin---SG38
   linkStyle 41 stroke:coral;
   subgraph SG39[Kearney]
     direction TB
@@ -367,10 +360,16 @@ graph TB
     direction TB
     SG40Annie(Annie)
   end
+  SG74Matthew---SG40
+  linkStyle 44 stroke:gray;
   subgraph SG41[O'Flaherty]
     direction TB
     SG41Kathleen(Kathleen)
   end
+  SG68John---SG41
+  linkStyle 45 stroke:maroon;
+  SG69Bridget---SG41
+  linkStyle 46 stroke:blue;
   subgraph SG42[Kearney]
     direction TB
     SG42Patrick(Patrick)
@@ -381,7 +380,7 @@ graph TB
   end
   subgraph SG44[Cassidy]
     direction TB
-    SG44Noreen(Noreen)
+    SG44Noirin(Noirin)
   end
   subgraph SG45[O'Brien]
     direction TB
@@ -395,9 +394,9 @@ graph TB
     SG46Terence(Terence)
   end
   SG36Gabriel---SG46
-  linkStyle 44 stroke:gray;
+  linkStyle 47 stroke:purple;
   SG53Carmel---SG46
-  linkStyle 45 stroke:maroon;
+  linkStyle 48 stroke:olive;
   subgraph SG47[Woods]
     direction TB
     SG47Sean(Sean)
@@ -408,9 +407,9 @@ graph TB
     SG48Craig(Craig)
   end
   SG47Sean---SG48
-  linkStyle 46 stroke:blue;
+  linkStyle 49 stroke:black;
   SG38Noreen---SG48
-  linkStyle 47 stroke:purple;
+  linkStyle 50 stroke:navy;
   subgraph SG49[McGuire]
     direction TB
     SG49Joe(Joe)
@@ -420,9 +419,9 @@ graph TB
     SG50Joe(Joe)
   end
   SG49Joe---SG50
-  linkStyle 48 stroke:olive;
-  SG38Aine---SG50
-  linkStyle 49 stroke:black;
+  linkStyle 51 stroke:red;
+  SG38Áine---SG50
+  linkStyle 52 stroke:coral;
   subgraph SG51[Hand]
     direction TB
     SG51Dermot(Dermot)
@@ -435,9 +434,9 @@ graph TB
     SG52Colm(Colm)
   end
   SG51Dermot---SG52
-  linkStyle 50 stroke:navy;
+  linkStyle 53 stroke:fuchsia;
   SG39Annie---SG52
-  linkStyle 51 stroke:red;
+  linkStyle 54 stroke:green;
   subgraph SG53[Devereux]
     direction TB
     SG53Carmel(Carmel)
@@ -452,9 +451,9 @@ graph TB
     SG55Eoin(Eoin)
   end
   SG54Joe---SG55
-  linkStyle 52 stroke:coral;
+  linkStyle 55 stroke:gray;
   SG46Geraldine---SG55
-  linkStyle 53 stroke:fuchsia;
+  linkStyle 56 stroke:maroon;
   subgraph SG56[Gallagher]
     direction TB
     SG56Brid(Brid)
@@ -465,9 +464,9 @@ graph TB
     SG57Aoife(Aoife)
   end
   SG39Teady---SG57
-  linkStyle 54 stroke:green;
+  linkStyle 57 stroke:blue;
   SG56Brid---SG57
-  linkStyle 55 stroke:gray;
+  linkStyle 58 stroke:purple;
   subgraph SG58[Fenton]
     direction TB
     SG58Dan(Dan)
@@ -479,9 +478,9 @@ graph TB
     SG59Mary(Mary)
   end
   SG58Dan---SG59
-  linkStyle 56 stroke:maroon;
+  linkStyle 59 stroke:olive;
   SG39Mairin---SG59
-  linkStyle 57 stroke:blue;
+  linkStyle 60 stroke:black;
   subgraph SG60[O'Sheehan]
     direction TB
     SG60Brian(Brian)
@@ -495,16 +494,86 @@ graph TB
     SG61Corinne(Corinne)
   end
   SG60Brian---SG61
-  linkStyle 58 stroke:purple;
+  linkStyle 61 stroke:navy;
   SG46Patricia---SG61
-  linkStyle 59 stroke:olive;
+  linkStyle 62 stroke:red;
   subgraph SG62[Kearney]
     direction TB
     SG62Oisin(Oisin)
     SG62Oliver(Oliver)
   end
   SG46Terence---SG62
-  linkStyle 60 stroke:black;
+  linkStyle 63 stroke:coral;
+  subgraph SG63[Lennon]
+    direction TB
+    SG63Barry(Barry)
+    SG63Gavin(Gavin)
+    SG63Niall(Niall)
+  end
+  SG67Tommy---SG63
+  linkStyle 64 stroke:fuchsia;
+  SG18Marian---SG63
+  linkStyle 65 stroke:green;
+  subgraph SG64[Lennon]
+    direction TB
+    SG64Daniel(Daniel)
+  end
+  SG63Gavin---SG64
+  linkStyle 66 stroke:gray;
+  subgraph SG65[Kearney]
+    direction TB
+    SG65Rebecca(Rebecca)
+    SG65Matthew(Matthew)
+    SG65Asa(Asa)
+  end
+  SG38Rick---SG65
+  linkStyle 67 stroke:maroon;
+  SG66Margaret---SG65
+  linkStyle 68 stroke:blue;
+  subgraph SG66[Breen]
+    direction TB
+    SG66Margaret(Margaret)
+  end
+  subgraph SG67[Lennon]
+    direction TB
+    SG67Tommy(Tommy)
+  end
+  subgraph SG68[Flaherty]
+    direction TB
+    SG68John(John)
+  end
+  SG70Walter---SG68
+  linkStyle 69 stroke:purple;
+  SG71Bridget---SG68
+  linkStyle 70 stroke:olive;
+  subgraph SG69[King]
+    direction TB
+    SG69Bridget(Bridget)
+  end
+  SG72Michael---SG69
+  linkStyle 71 stroke:black;
+  SG73Catherine---SG69
+  linkStyle 72 stroke:navy;
+  subgraph SG70[Flaherty]
+    direction TB
+    SG70Walter(Walter)
+  end
+  subgraph SG71[Carr]
+    direction TB
+    SG71Bridget(Bridget)
+  end
+  subgraph SG72[King]
+    direction TB
+    SG72Michael(Michael)
+  end
+  subgraph SG73[Comeely]
+    direction TB
+    SG73Catherine(Catherine)
+  end
+  subgraph SG74[Browne]
+    direction TB
+    SG74Matthew(Matthew)
+  end
     </div>
     <script type="module">
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
